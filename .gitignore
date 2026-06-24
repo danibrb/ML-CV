@@ -1,0 +1,126 @@
+# ============================================================
+# Molecular Dynamics & PLUMED — Comprehensive Gitignore
+# ============================================================
+
+# --- Core MD Trajectory & Structure Outputs (Large/Regenerable) ---
+*.xtc
+*.trr
+*.tng
+*.dcd
+*.lammpstrj
+*.dump
+*.h5
+*.hdf5
+
+# --- GROMACS Specific Binary & Run Files ---
+*.tpr
+*.edr
+*.ene
+*.cpt
+*.log
+*.xvg
+# GROMACS automatic backup files (e.g., #topol.top.1#)
+\#*\#
+
+# --- PLUMED Specific Output & Analysis Files ---
+COLVAR
+COLVAR.*     # Covers COLVAR.0, COLVAR.1.gz, etc. for replicas
+HILLS
+HILLS.*      # Covers HILLS.0, test.0.HILLS, etc.
+grid.*
+fes.dat      # Free Energy Surface from sum_hills, often regenerable
+bck.*        # PLUMED's own backup files (bck.X.filename)
+restart.dat  # PLUMED restart files
+
+# --- Scientific Data & Intermediate Results ---
+*.npy
+*.npz
+*.dat
+*.out
+*.csv
+*.tsv
+
+# --- Python & Jupyter Environment Files ---
+# Standard Python ignores (based on GitHub's template) 【turn0search14】
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# Jupyter Notebook checkpoints 【turn0search14】
+.ipynb_checkpoints/
+# Spyder/PyCharm/VSCode project settings
+.spyderproject/
+.spyproject/
+.idea/
+.vscode/
+*.code-workspace
+
+# --- Operating System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# source material
+tutorial
+
+# ============================================================
+# FINAL RESULTS MANAGEMENT - KEEP IMPORTANT FILES
+# ============================================================
+
+# --- Option 1: Keep all files in a 'results/final' directory ---
+# This ignores everything in 'results/' except the 'final/' subdirectory.
+results/*
+!results/final/
+!results/final/*
+
+!input/*
+!input/md_inputs/*
+
+
+# --- Option 2: Keep specific file types anywhere in the project ---
+# Uncomment the lines below to track these specific final file types.
+# !*.pdf
+# !*.png
+# !*.jpg
+# !*.svg
+# !final_*.dat
+# !summary_*.csv
+
+# --- Option 3: Keep files in a 'manuscript/figures' directory ---
+# manuscript/figures/
+# !manuscript/figures/*.png
+# !manuscript/figures/*.svg
+# !manuscript/figures/*.pdf
+
+# --- Option 4: Force-add specific important files that are otherwise ignored ---
+# If you have a crucial file that matches an ignore pattern above,
+# you can track it by using: git add -f <filename>
+# Example: git add -f final_fes.dat
