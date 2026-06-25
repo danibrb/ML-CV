@@ -25,6 +25,7 @@
 # --- PLUMED Specific Output & Analysis Files ---
 COLVAR
 COLVAR.*     # Covers COLVAR.0, COLVAR.1.gz, etc. for replicas
+bck.*.COLVAR
 HILLS
 HILLS.*      # Covers HILLS.0, test.0.HILLS, etc.
 grid.*
