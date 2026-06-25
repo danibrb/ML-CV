@@ -89,6 +89,9 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
+# lightning logs
+lightning_logs
+
 # source material
 tutorial
 
