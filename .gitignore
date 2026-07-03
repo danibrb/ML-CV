@@ -28,6 +28,7 @@ COLVAR.*     # Covers COLVAR.0, COLVAR.1.gz, etc. for replicas
 bck.*.COLVAR
 HILLS
 HILLS.*      # Covers HILLS.0, test.0.HILLS, etc.
+bck.*.HILLS
 grid.*
 fes.dat      # Free Energy Surface from sum_hills, often regenerable
 bck.*        # PLUMED's own backup files (bck.X.filename)
